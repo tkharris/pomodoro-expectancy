@@ -1,6 +1,6 @@
 # Pomodoro Expectancy
 
-Answers the question that nobody asked: How many pomorodos do I have left in my lifetime?
+Answers the question that nobody asked: How many pomorodos do I have left in my lifetime? [Try it](http://tkh.pythonanywhere.com/)
 
 I've been doing GTD for a while now and use the pomodoro technique for managing the actual chunks of work that are fed into the system. I'm starting to get a decent feel for how many pomodoros it takes to get things done and/or to become an expert in some new technique or discipline and I'm thinking of growth and progress in terms of _x_ pomodoros. Now that I'm getting older I am also thinking not just in terms of what I can do in the next few years, but how much I can do period (i.e. before kicking the bucket). This web app attempts to answer that very question for myself and the potentially non-zero number of other people interested in knowing by computing a time left to live from a few demographic parameters and a pomodoro rate from some other parameters.
 

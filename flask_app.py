@@ -71,7 +71,7 @@ def interact_pomodoro_expectancy():
         if (current_time_left is not None):
             # create output string
             string_to_print = Markup("You have <font size='+10'>" + str(int(np.ceil(current_time_left))) + "</font> healthy years left to live!")
-            string_to_print += Markup("<br/> During which time you'll complete another <font size='+10'>" + str(int(np.ceil(pomodori_left))) + "</font> pomodori.")
+            string_to_print += Markup("<br/> ...Or about <font size='+10'>" + str(int(np.ceil(pomodori_left))) + "</font> pomodori.")
         else:
             string_to_print = Markup("Error! No data found for selected parameters")
             current_time_left = 1        # healthy years
