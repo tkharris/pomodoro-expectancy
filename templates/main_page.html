@@ -4,15 +4,39 @@
   <TITLE>Pomodoro Expectancy</TITLE>
   <META charset="utf-8">
   <META name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+<style>
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  
+    .container {
+width: auto;
+max-width: 680px;
+padding: 0 15px;
+}
+
+</style>
 </HEAD>
-<BODY>
-<DIV class="container">
+<BODY class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+<div class="container">
     <DIV class="row">
-        <H2><a href='http://www.TimeLeftToLive.com' target='_blank'>TimeLeftToLive.com</a></H2>
-        <H4>More Data Science and Machine Learning Articles at <a href='http://amunategui.github.io' target='_blank'>amunategui.github.io</a></H4><BR>
+        <H2><a href='http://tkh.pythonanywhere.com' target='_blank'>Pomodoro Expectancy</a></H2>
         <FORM id='submit_params' method="POST" action="">
             <SELECT class="selectpicker" name="sex">
                 <option>Both sexes</option>
@@ -55,6 +79,12 @@
             {% endfor %}
         </TR>
     </TABLE>
-</DIV>
+</div>
+</main>
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Source at <a href="https://github.com/tkharris/pomodoro-expectancy">https://github.com/tkharris/pomodoro-expectancy</a>. Initial code from <a href="http://amunategui.github.io/">Manuel Amunategui</a>.</span>
+    </div>
+</footer>
 </BODY>
 </HTML>
