@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+  <TITLE>TimeLeftToLive.com</TITLE>
+  <META charset="utf-8">
+  <META name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</HEAD>
+<BODY>
+<DIV class="container">
+    <DIV class="row">
+        <H2><a href='http://www.TimeLeftToLive.com' target='_blank'>TimeLeftToLive.com</a></H2>
+        <H4>More Data Science and Machine Learning Articles at <a href='http://amunategui.github.io' target='_blank'>amunategui.github.io</a></H4><BR>
+        <FORM id='submit_params' method="POST" action="">
+            <SELECT class="selectpicker" name="sex">
+                <option>Both sexes</option>
+                <option>Female</option>
+                <option>Male</option>
+            </SELECT>
+            <SELECT class="selectpicker" name="age">
+                <option value="{{default_age}}" selected>{{default_age}}</option>
+                    {% for age in range(1,100) %}
+                        <option value="{{age}}">{{age}}</option>
+                    {% endfor %}
+            </SELECT>
+            <SELECT class="selectpicker"  name="country">
+                <option value="{{default_country}}" selected>{{default_country}}</option>
+                    {% for country in country_list %}
+                        <option value="{{country}}">{{country}}</option>
+                    {% endfor %}
+            </SELECT>
+            <br/>
+            <label for="ppd">Pomodori per day:</label>
+            <input type="text" id="ppd" name="ppd" value="{{ppd}}"/><br/>
+            <label for="wdpw">Work days per week</label>
+            <input type="text" id="wdpw" name="wdpw" value="{{wdpw}}"/><br/>
+            <label for "vwpy">Vacation weeks per year</label>
+            <input type="text" id="vwpy" name="vwpy" value="{{vwpy}}"/><br/>
+            <button type="submit" class="btn btn-primary">Show me</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/';" value="Reset">Reset</button>
+        </FORM>
+    </DIV>
+    <BR>
+    <H2>{{string_to_print}}</H2>
+    <BR>
+    <TABLE>
+        <TR>
+            {% for imag in healthy_image_list %}
+                {% if loop.index == 21 or loop.index == 41 or loop.index == 61 or loop.index == 81 %}
+                    </TR><TR>
+                {% endif %}
+                <td><img src={{imag}} width="40" height="40"></td>
+            {% endfor %}
+        </TR>
+    </TABLE>
+</DIV>
+</BODY>
+</HTML>
